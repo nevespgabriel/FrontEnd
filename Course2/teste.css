@@ -1,0 +1,30 @@
+.container{
+    display: flex; /*tells the web browser this is a flexbox*/
+    /*flex-direction: row-reverse;*/ /*The elements starts from right to left. If flex-direction: column, the elements will be displayed vertically. Column reverse, the elements will be first the last and last the first vertically, and will be at the botoom of the container*/
+    /*flex-wrap: wrap;*/ /*Now it wraps the elements to the next line if they are too large for the size of the page. Before, they changed its size if the web page were too small (by default it is setted to nowrap)*/
+    flex-flow: row wrap; /*Does the same as flex-direction and flex-wrap, but in one attribute*/
+    justify-content: center; /*Realocates the items on the space. By default it is setted as flex-start, which means the items will be all at the start to finish. With center they will be at the center of the flexbox. May use flex-end, space-between (space them out as much as possible), space-around (divides the space between them) and space-evenly (spacing between two items and the space to the edges is equal)*/
+    /*align-items: ;*/ /*Allows to align the items on the cross axis. Starts on flex-start (items on top). May assume flex-end (items on bottom), center, stretch (strectches all elements to fill the height of the container), baseline (bottom of the text box)*/
+    /*align-content: ;*/ /*The same as justify-content, excepts along of the cross axis. Serves when you have multiple lines os elements*/
+}
+
+.flex-item{
+    min-height: 200px;
+    min-width: 200px;
+}
+
+#flex-item1{
+    background: red;
+    height: 100px;
+    order: 1;  /*will be the last, because the order is default 0, and it goes from the lowest to the higher number*/
+    flex-grow: 1;/*Allow us to make our item grow and occupie more space. With this and the others without this attribute, all the extra space will be for this item*/
+}
+
+#flex-item2{
+    background: green;
+    height: 150px;
+}
+
+#flex-item3{
+    background: blue;
+}
