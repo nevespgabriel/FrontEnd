@@ -1,14 +1,14 @@
-function tellFortune(numChildren, partName, location, job){
+const tellFortune = (numChildren, partName, location, job) => {
     console.log(`You will be a ${job} in ${location}, married to ${partName} with ${numChildren} kids.`);
 }
 
-function calcCircle(radius){
+const calcCircle = radius => {
     let circ = radius*2*Math.PI;
     let area = radius * radius * Math.PI;
     console.log(`The circumference is ${circ.toFixed(2)}, and the area is ${area.toFixed(2)}.`);
 }
 
-function basicMath(n1, n2, str){
+const basicMath = (n1, n2, str) => {
     switch(str){
         case '+':
             return n1 + n2;
@@ -23,7 +23,7 @@ function basicMath(n1, n2, str){
     }
 }
 
-function randomizer(min, max){
+const randomizer = (min, max) => {
     if(min <= max){
         return min + Math.floor(Math.random() * (max-min));
     }
